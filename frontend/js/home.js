@@ -65,7 +65,7 @@
 //     let stats = {}; // To store the fetched stats
 //     const fetchStats = async () => {
 //     try {
-//         const response = await fetch('http://localhost:8000/api/homepage-stats');
+//         const response = await fetch('https://slrproject.netlify.app/api/homepage-stats');
 //         stats = await response.json();
 
 //         // --- ADD THESE TWO LINES FOR DEBUGGING ---
@@ -84,7 +84,7 @@
 
 //     const fetchPartners = async () => {
 //         try {
-//             const response = await fetch('http://localhost:8000/api/partners');
+//             const response = await fetch('https://slrproject.netlify.app/api/partners');
 //             const partners = await response.json();
             
 //             partnersListElement.innerHTML = ''; 

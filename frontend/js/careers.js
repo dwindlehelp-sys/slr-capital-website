@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     try {
-        const response = await fetch('http://localhost:8000/api/jobs');
+        const response = await fetch('https://slrproject.netlify.app/api/jobs');
         const jobs = await response.json();
 
         if (jobs.length === 0) {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const formData = new FormData(applicationForm);
 
         try {
-            const response = await fetch('http://localhost:8000/api/applications', {
+            const response = await fetch('https://slrproject.netlify.app/api/applications', {
                 method: 'POST',
                 body: formData
             });

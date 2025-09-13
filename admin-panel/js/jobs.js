@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchAndDisplayJobs = async (searchTerm = '') => {
         try {
-            const url = `http://localhost:8000/api/jobs?search=${searchTerm}`;
+            const url = `https://slrproject.netlify.app/api/jobs?search=${searchTerm}`;
             const response = await fetch(url); // Public route, no token needed for GET
 
             const jobs = await response.json();
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 deleteButton.innerHTML = `<i class="fas fa-trash-alt"></i> Delete`;
                 deleteButton.addEventListener('click', async () => {
                     if (confirm(`Are you sure you want to delete the "${job.roleTitle}" position?`)) {
-                        await fetch(`http://localhost:8000/api/jobs/${job.id}`, {
+                        await fetch(`https://slrproject.netlify.app/api/jobs/${job.id}`, {
                             method: 'DELETE',
                             headers: { 'Authorization': `Bearer ${token}` }
                         });
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const openingsCount = document.getElementById('openingsCount').value;
         const jobDescription = document.getElementById('jobDescription').value;
         
-        const response = await fetch('http://localhost:8000/api/jobs', {
+        const response = await fetch('https://slrproject.netlify.app/api/jobs', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
             body: JSON.stringify({ roleTitle, openingsCount, jobDescription }),

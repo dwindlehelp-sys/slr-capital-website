@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchAndDisplayPartners = async (searchTerm = '') => {
         try {
             // Add the search term as a query parameter to the URL
-            const url = `http://localhost:8000/api/partners?search=${searchTerm}`;
+            const url = `https://slrproject.netlify.app/api/partners?search=${searchTerm}`;
             
             const response = await fetch(url, {
                 headers: { 'Authorization': `Bearer ${token}` }
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 deleteButton.innerHTML = `<i class="fas fa-trash-alt"></i> Delete`;
                 deleteButton.addEventListener('click', async () => {
                     if (confirm(`Are you sure you want to delete ${partner.bankName}?`)) {
-                        await fetch(`http://localhost:8000/api/partners/${partner.id}`, {
+                        await fetch(`https://slrproject.netlify.app/api/partners/${partner.id}`, {
                             method: 'DELETE',
                             headers: { 'Authorization': `Bearer ${token}` }
                         });
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const bankName = document.getElementById('bankName').value;
         const logoUrl = document.getElementById('logoUrl').value;
-        const response = await fetch('http://localhost:8000/api/partners', {
+        const response = await fetch('https://slrproject.netlify.app/api/partners', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
             body: JSON.stringify({ bankName, logoUrl }),

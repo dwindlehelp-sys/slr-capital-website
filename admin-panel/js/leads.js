@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const deleteAllButton = document.getElementById('deleteAllButton');
 
     const fetchAndDisplayLeads = async () => {
-        let url = 'http://localhost:8000/api/leads';
+        let url = 'https://slrproject.netlify.app/api/leads';
         const startDate = startDateInput.value;
         const endDate = endDateInput.value;
         if (startDate && endDate) {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target && e.target.classList.contains('delete-btn')) {
             const leadId = e.target.getAttribute('data-id');
             if (confirm(`Are you sure you want to delete lead #${leadId}?`)) {
-                await fetch(`http://localhost:8000/api/leads/${leadId}`, {
+                await fetch(`https://slrproject.netlify.app/api/leads/${leadId}`, {
                     method: 'DELETE',
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     deleteAllButton.addEventListener('click', async () => {
         if (confirm('ARE YOU SURE you want to delete ALL leads? This cannot be undone.')) {
-            await fetch('http://localhost:8000/api/leads', {
+            await fetch('https://slrproject.netlify.app/api/leads', {
                 method: 'DELETE',
                 headers: { 'Authorization': `Bearer ${token}` }
             });
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Replace the old exportButton listener with this one
 exportButton.addEventListener('click', async () => {
     try {
-        const response = await fetch('http://localhost:8000/api/leads/export', {
+        const response = await fetch('https://slrproject.netlify.app/api/leads/export', {
             headers: {
                 // This is the crucial part: sending the token
                 'Authorization': `Bearer ${token}`

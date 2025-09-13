@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Populate the role filter dropdown ---
     const populateRoleFilter = async () => {
         try {
-            const response = await fetch('http://localhost:8000/api/job-titles', {
+            const response = await fetch('https://slrproject.netlify.app/api/job-titles', {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             const jobs = await response.json();
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const startDate = startDateInput.value;
         const endDate = endDateInput.value;
         
-        const url = `http://localhost:8000/api/applications?search=${searchTerm}&jobId=${jobId}&startDate=${startDate}&endDate=${endDate}`;
+        const url = `https://slrproject.netlify.app/api/applications?search=${searchTerm}&jobId=${jobId}&startDate=${startDate}&endDate=${endDate}`;
         
         try {
             const response = await fetch(url, {
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             applications.forEach(app => {
                 const row = document.createElement('tr');
                 const appliedDate = new Date(app.appliedAt).toLocaleString('en-IN');
-                const resumeLink = `<a href="http://localhost:8000/${app.resumeUrl.replace(/\\/g, '/')}" target="_blank">View Resume</a>`;
+                const resumeLink = `<a href="https://slrproject.netlify.app/${app.resumeUrl.replace(/\\/g, '/')}" target="_blank">View Resume</a>`;
 
                 row.innerHTML = `
                     <td>${appliedDate}</td>
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     deleteAllButton.addEventListener('click', async () => {
         if (confirm('ARE YOU SURE you want to delete ALL applications? This is irreversible.')) {
-            await fetch('http://localhost:8000/api/applications', {
+            await fetch('https://slrproject.netlify.app/api/applications', {
                 method: 'DELETE', headers: { 'Authorization': `Bearer ${token}` }
             });
             fetchAndDisplayApplications();
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     exportButton.addEventListener('click', async () => {
         try {
             // Corrected to fetch from the applications export endpoint
-            const response = await fetch('http://localhost:8000/api/applications/export', {
+            const response = await fetch('https://slrproject.netlify.app/api/applications/export', {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             if (!response.ok) throw new Error('Network response was not ok');
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target && e.target.classList.contains('delete-btn')) {
             const appId = e.target.getAttribute('data-id');
             if (confirm(`Are you sure you want to delete this application?`)) {
-                await fetch(`http://localhost:8000/api/applications/${appId}`, {
+                await fetch(`https://slrproject.netlify.app/api/applications/${appId}`, {
                     method: 'DELETE', headers: { 'Authorization': `Bearer ${token}` }
                 });
                 fetchAndDisplayApplications();

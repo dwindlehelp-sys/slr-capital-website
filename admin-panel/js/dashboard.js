@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to fetch and display the current stats
     const fetchAndDisplayStats = async () => {
         try {
-            const response = await fetch('http://localhost:8000/api/homepage-stats', {
+            const response = await fetch('https://slrproject.netlify.app/api/homepage-stats', {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             const stats = await response.json();
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const newAmount = loanAmountInput.value;
         try {
-            const response = await fetch('http://localhost:8000/api/homepage-stats', {
+            const response = await fetch('https://slrproject.netlify.app/api/homepage-stats', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

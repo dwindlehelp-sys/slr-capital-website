@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 serviceRequested: serviceInput.value,
             };
             try {
-                const response = await fetch('http://localhost:8000/api/leads', {
+                const response = await fetch('https://slrproject.netlify.app/api/leads', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData),
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const fetchStats = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/homepage-stats');
+                const response = await fetch('https://slrproject.netlify.app/api/homepage-stats');
                 statsData = await response.json();
                 const loanAmountValue = parseFloat(statsData.loanDisbursed) || 0;
                 loanAmountElement.setAttribute('data-target', loanAmountValue);
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const fetchPartners = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/partners');
+                const response = await fetch('https://slrproject.netlify.app/api/partners');
                 const partners = await response.json();
                 partnersListElement.innerHTML = '';
                 partners.forEach(partner => {

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                const response = await fetch('http://localhost:8000/api/admin/change-password', {
+                const response = await fetch('https://slrproject.netlify.app/api/admin/change-password', {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
