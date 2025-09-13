@@ -23,10 +23,11 @@
     "multer": "^2.0.2",
     "pg": "^8.16.3",
     "serverless-http": "^4.0.0",
-    "twilio": "^5.8.0"
+    "twilio": "^5.8.0",
+    "prisma": "^6.16.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10",
-    "prisma": "^6.14.0"
+    "nodemon": "^3.1.10"
+    
   }
 }
