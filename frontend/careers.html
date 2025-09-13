@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - SLR Capital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="photos/logo-old.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="photos/SLR_logo (1).png" alt="SLR Capital Logo" style="height: 40px;">
+                <span>SLR CAPITAL SOLUTIONS PVT LTD</span>
+            </a>
+            <nav id="navbar-links" class="navbar-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html" class="cta-button">Contact Us</a></li>
+                    <li class="contact-item"> <i class="fas fa-phone-alt"></i> +91 9440421876</li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Work With Us</h1>
+                <p>Join our team and help shape the future of finance.</p>
+            </div>
+        </section>
+
+        <section class="container" style="padding-bottom: 4rem;">
+            <h2>Current Openings</h2>
+            <div id="job-listings">
+                </div>
+        </section>
+    </main>
+
+    <div id="application-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="photos/JOB.avif" alt="Join our team">
+                </div>
+                <div class="modal-form">
+                    <h2>Apply for <span id="modal-job-title"></span></h2>
+                    <form id="applicationForm" enctype="multipart/form-data">
+                        <input type="hidden" id="jobId" name="jobId">
+                        <div class="form-group"><label for="applicantName">Full Name:</label><input type="text" id="applicantName" name="applicantName" required></div>
+                        <div class="form-group"><label for="applicantEmail">Email:</label><input type="email" id="applicantEmail" name="applicantEmail" required></div>
+                        <div class="form-group"><label for="applicantPhone">Phone:</label><input type="tel" id="applicantPhone" name="applicantPhone" required></div>
+                        <div class="form-group"><label for="resume">Upload Resume (PDF, DOCX):</label><input type="file" id="resume" name="resume" required></div>
+                        <button type="submit" class="button">Submit Application</button>
+                    </form>
+                    <div id="applicationMessage" style="margin-top: 15px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="social-bar">
+  <a href="https://www.facebook.com/share/1EEeqqRQJs/" target="_blank" class="facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.instagram.com/slr_capital_pvtltd/#" target="_blank" class="instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://x.com/slrcaptpvtltd" target="_blank" class="twitter">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/slr-capital-pvt-ltd/" target="_blank" class="linkedin">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+    <!-- WhatsApp -->
+ <a href="https://wa.me/919440421876" target="_blank" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<!--footer-->
+    <footer class="footer">
+    <div class="container footer-content">
+        <div class="footer-column about">
+            <a href="index.html" class="logo">
+                <img src="photos/SLR_logo (1).png" alt="SLR Capital Logo">
+                <span>SLR CAPITAL SOLUTIONS PVT LTD</span>
+            </a>
+            <p>Your trusted partner in providing seamless loan and capital solutions tailored to your needs.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1EEeqqRQJs/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/slrcaptpvtltd"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/slr-capital-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/slr_capital_pvtltd/#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column links">
+            <h3>Our Services</h3>
+            <ul>
+                <li><a href="#">Home Loan</a></li>
+                <li><a href="#">Business Loan</a></li>
+                <li><a href="#">Personal Loan</a></li>
+                <li><a href="#">Investment Plans</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column contact">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-map-marker-alt"></i> SLR CAPITAL SOLUTIONS PVT LTD, BRUNDAVANAM, NELLORE, AP</p>
+            <p><i class="fas fa-phone-alt"></i> +91 9440421876</p>
+            <p><i class="fas fa-envelope"></i> slrfinserv@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 SLR CAPITAL SOLUTIONS PVT LTD. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="js/careers.js"></script>
+    <script src="js/main.js"></script> </body>
+</html>

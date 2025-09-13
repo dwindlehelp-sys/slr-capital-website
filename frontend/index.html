@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLR Capital</title>
+
+    <link rel="icon" type="image/png" href="photos/logo-old.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="photos/SLR_logo (1).png" alt="SLR Capital Logo" style="height: 40px;">
+                <span>SLR CAPITAL SOLUTIONS PVT LTD</span>
+            </a>
+            <nav id="navbar-links" class="navbar-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html" class="cta-button">Contact Us</a></li>
+                    <li class="contact-item"> <i class="fas fa-phone-alt"></i> +91 9440421876</li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+       <section class="hero">
+         <div class="container hero-content">
+           <div class="hero-text">
+               <h1>Your Trusted Financial Partner</h1>
+               <p>Providing seamless loan and capital solutions tailored to your needs. We're committed to helping you achieve your financial goals with expert guidance and support.</p>
+               <a href="contact.html" class="button button-primary">Get Started</a>
+           </div>
+           <div class="hero-images">
+             <img src="photos/HR-1.png" alt="Financial consultation" class="hero-img-1">
+               <img src="photos/herosection-2.png" alt="Business growth chart" class="hero-img-2">
+           </div>
+         </div>
+       </section>
+
+       <section class="stats">
+            <div class="container">
+                <h2>Our Impact in Numbers</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-university icon-stat"></i>
+                        <h3>Lending Partners</h3>
+                        <p class="counter" data-target="100">+</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-users icon-stat"></i>
+                        <h3>Happy Customers</h3>
+                        <p class="counter" data-target="5000">+</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-rupee-sign icon-stat"></i>
+                        <h3>Loan Disbursed</h3>
+                        <p id="loan-amount" class="counter" data-target="0">Loading...</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-city icon-stat"></i>
+                        <h3>Cities Served</h3>
+                        <p class="counter" data-target="25">+</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <section class="services">
+    <div class="container">
+        <h2>Our Popular Products</h2>
+        <div class="service-items">
+
+            <div class="service-item" data-service="Credit Cards">
+                <!-- <div class="badge best-offer">Best Offers</div> -->
+                <i class="fas fa-credit-card service-icon"></i>
+                <h3>Credit Cards</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="Personal Loan">
+                <!-- <div class="badge cashback">Cashback Offer</div> -->
+                <i class="fas fa-money-bill-wave service-icon"></i>
+                <h3>Personal Loan</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="Business Loan">
+                <!-- <div class="badge cashback">Cashback Offer</div> -->
+                <i class="fas fa-wallet service-icon"></i>
+                <h3>Business Loan</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="Home Loan">
+                <i class="fas fa-home service-icon"></i>
+                <h3>Home Loan</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="Loan Against Property">
+                <i class="fas fa-building-columns service-icon"></i>
+                <h3>Loan Against Property</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="Transfer Home Loan">
+                <i class="fas fa-exchange-alt service-icon"></i>
+                <h3>Transfer Home Loan</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="Bonds">
+                <!-- <div class="badge earn-up">Earn up to 13.25%</div> -->
+                <i class="fas fa-chart-line service-icon"></i>
+                <h3>Bonds</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="Loan Against Car">
+                <i class="fas fa-car service-icon"></i>
+                <h3>Loan Against Car</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="PB Money">
+                <i class="fas fa-coins service-icon"></i>
+                <h3>PB Money</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="Working Capital">
+                <!-- <div class="badge cashback">Cashback Offer</div> -->
+                <i class="fas fa-store service-icon"></i>
+                <h3>Working Capital</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 60px;">Insurance Products</h2>
+        <div class="service-items">
+
+            <div class="service-item" data-service="Health Insurance">
+                <!-- <div class="badge up-to">Up to 25% Off</div> -->
+                <i class="fas fa-heart-pulse service-icon"></i>
+                <h3>Health Insurance</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="Term Life Insurance">
+                <!-- <div class="badge up-to">Up to 15% Off</div> -->
+                <i class="fas fa-umbrella service-icon"></i>
+                <h3>Term Life Insurance</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="Investment Plan">
+                <!-- <div class="badge tax-free">Tax Free Returns</div> -->
+                <i class="fas fa-seedling service-icon"></i>
+                <h3>Investment Plan</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="Car Insurance">
+                <!-- <div class="badge new">New</div> -->
+                <i class="fas fa-car-burst service-icon"></i>
+                <h3>Car Insurance</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="National Pension Scheme">
+                <i class="fas fa-landmark service-icon"></i>
+                <h3>National Pension Scheme</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="service-item" data-service="Retirement Plans">
+                <i class="fas fa-person-cane service-icon"></i>
+                <h3>Retirement Plans</h3>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--advantages-->
+<section class="advantages">
+    <div class="container">
+        <h2>Why Choose SLR Capital?</h2>
+        <p class="subheading">Experience the advantages of partnering with us.</p>
+        <div class="advantages-grid">
+            <div class="advantage-item">
+                <i class="fas fa-check-circle"></i>
+                <h3>Expert Guidance</h3>
+                <p>Navigate your financial journey with our expert advisors.</p>
+            </div>
+            <div class="advantage-item">
+                <i class="fas fa-bolt"></i>
+                <h3>Quick Approval</h3>
+                <p>Streamlined processes for fast and efficient loan approval.</p>
+            </div>
+            <div class="advantage-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Trusted & Secure</h3>
+                <p>Your financial security is our top priority.</p>
+            </div>
+            <div class="advantage-item">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Tailored Solutions</h3>
+                <p>Customized financial products to meet your unique needs.</p>
+            </div>
+            <div class="advantage-item">
+                <i class="fas fa-users"></i>
+                <h3>Customer-Centric</h3>
+                <p>We are dedicated to providing excellent customer service.</p>
+            </div>
+            <div class="advantage-item">
+                <i class="fas fa-headset"></i>
+                <h3>Dedicated Support</h3>
+                <p>Our team is here to support you at every step.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--founders section-->
+<section class="founders-section">
+  <div class="container">
+    <h2>Meet Our Founders</h2>
+    <div class="founders-wrapper">
+      <div class="founders-container" id="founders-container">
+        <div class="founder-slide">
+          <div class="founder-info">
+            <h3>Innamuri Leela Ramesh</h3>
+            <h4>Co-Founder</h4>
+            <p>
+              At SLR Capital, our mission has always been clear – to make finance
+              simple, transparent, and accessible for everyone. I strongly believe
+              that trust and integrity are the true currencies of the financial
+              world. With every service we offer, from personal loans to business
+              support, we aim to empower individuals and businesses to achieve their
+              goals without unnecessary hurdles. Our commitment is not just to
+              provide loans, but to build long-lasting relationships that create
+              financial confidence and growth.
+            </p>
+          </div>
+        </div>
+
+        <div class="founder-slide">
+          <div class="founder-info">
+            <h3>Innamuri Suma Pravallika</h3>
+            <h4>Co-Founder</h4>
+            <p>
+              Financial freedom is not just about numbers – it’s about giving people
+              the courage to dream bigger and the means to achieve it. At SLR
+              Capital, we focus on understanding every client’s unique journey and
+              providing solutions that truly fit their needs. For me, this company is
+              more than just finance – it’s about building a community where people
+              feel supported, valued, and inspired to reach their highest potential.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--partners section-->
+     <!-- <section class="partners">
+    <div class="container">
+        <h2>Our Trusted Partners</h2>
+        <p class="subheading">We are proud to collaborate with leading financial institutions to bring you the best services.</p>
+        <div id="partners-list" class="partners-grid">
+            </div>
+    </div> -->
+    <!-- <button class="view-all-btn" onclick="togglePartners()">View All</button>
+    <script>
+function togglePartners() {
+  const grid = document.getElementById("partners-list");
+  const btn = document.querySelector(".view-all-btn");
+
+  grid.classList.toggle("expanded");
+  btn.textContent = grid.classList.contains("expanded") ? "View Less" : "View All";
+}
+</script> -->
+<section class="partners">
+  <div class="container">
+    <h2>Our Trusted Partners</h2>
+    <p class="subheading">
+      We are proud to collaborate with 150+ leading financial institutions to bring you the best services.
+    </p>
+
+    <div class="partners-track">
+      <div id="partners-list" class="partners-slider">
+        <!-- backend logos will be injected here -->
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+async function loadPartners() {
+  const grid = document.getElementById("partners-list");
+
+  // Example: fetch partner logos from backend
+  // Replace with your actual API call
+  const logos = await fetch("/api/partners")
+    .then(res => res.json());
+
+  // Render partner logos
+  logos.forEach(logo => {
+    const div = document.createElement("div");
+    div.className = "partner-logo-item";
+    div.innerHTML = `<img src="${logo.url}" alt="${logo.name}">`;
+    grid.appendChild(div);
+  });
+
+  // Duplicate logos for seamless infinite scroll
+  grid.querySelectorAll(".partner-logo-item").forEach(item => {
+    grid.appendChild(item.cloneNode(true));
+  });
+}
+
+// run on page load
+loadPartners();
+</script>
+
+
+</section>
+    </main>
+<!--footer-->
+    <footer class="footer">
+    <div class="container footer-content">
+        <div class="footer-column about">
+            <a href="index.html" class="logo">
+                <img src="photos/SLR_logo (1).png" alt="SLR Capital Logo">
+                <span>SLR CAPITAL SOLUTIONS PVT LTD</span>
+            </a>
+            <p>Your trusted partner in providing seamless loan and capital solutions tailored to your needs.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1EEeqqRQJs/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/slrcaptpvtltd"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/slr-capital-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/slr_capital_pvtltd/#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column links">
+            <h3>Our Services</h3>
+            <ul>
+                <li><a href="#">Home Loan</a></li>
+                <li><a href="#">Business Loan</a></li>
+                <li><a href="#">Personal Loan</a></li>
+                <li><a href="#">Investment Plans</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column contact">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-map-marker-alt"></i> SLR CAPITAL SOLUTIONS PVT LTD, BRUNDAVANAM, NELLORE, AP</p>
+            <p><i class="fas fa-phone-alt"></i> +91 9440421876</p>
+            <p><i class="fas fa-envelope"></i> slrfinserv@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 SLR CAPITAL SOLUTIONS PVT LTD. All Rights Reserved.</p>
+    </div>
+</footer>
+    <!--lead form-->
+    <div id="lead-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-grid">
+            <div class="modal-image">
+                <img src="photos/hr2.png" alt="Consultation">
+            </div>
+            <div class="modal-form">
+                <h2>Inquiry Form</h2>
+        <form id="leadForm">
+    <input type="hidden" id="service" name="service">
+    <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required>
+    </div>
+    <button type="submit" class="button">Submit Inquiry</button>
+</form>
+<!-- <div id="formMessage" style="margin-top: 15px;"></div> -->
+                <div id="formMessage" style="margin-top: 15px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="social-bar">
+  <a href="https://www.facebook.com/share/1EEeqqRQJs/" target="_blank" class="facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.instagram.com/slr_capital_pvtltd/#" target="_blank" class="instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://x.com/slrcaptpvtltd" target="_blank" class="twitter">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/slr-capital-pvt-ltd/" target="_blank" class="linkedin">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <!-- WhatsApp -->
+  <a href="https://wa.me/919440421876" target="_blank" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+
+
+
+    <!-- <script src="js/home.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+</html>

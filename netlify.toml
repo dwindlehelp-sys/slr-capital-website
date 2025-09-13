@@ -1,0 +1,13 @@
+# This file tells Netlify how to build and deploy your project
+
+[build]
+  # The folder for your public website
+  publish = "frontend/"
+  # The folder for your backend API functions
+  functions = "backend/src/"
+
+# This rule makes your API accessible at a clean URL like /api/partners
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server/:splat"
+  status = 200

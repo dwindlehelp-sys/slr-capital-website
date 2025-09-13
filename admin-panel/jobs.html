@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Jobs - Admin</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+            <link rel="icon" type="image/png" href="SLR_logo (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="page-header-admin">
+            <div class="header-logo">
+                <a href="dashboard.html" class="logo">
+                    <img src="SLR_logo (1).png" alt="Logo">
+                    <span>SLR CAPITAL SOLUTIONS PVT LTD</span>
+                </a>
+            </div>
+            <h1 class="header-title">Manage Job Openings</h1>
+            <a href="dashboard.html" class="button button-secondary"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+        </header>
+
+        <main class="dashboard-main">
+            <section class="dashboard-section">
+                <h2><i class="fas fa-plus-circle"></i> Add a New Job Opening</h2>
+                <div class="section-content">
+                    <form id="addJobForm" class="data-form">
+                        <div class="form-group"><label for="roleTitle">Role Title:</label><input type="text" id="roleTitle" required></div>
+                        <div class="form-group"><label for="openingsCount">Number of Openings:</label><input type="number" id="openingsCount" required></div>
+                        <div class="form-group"><label for="jobDescription">Job Description:</label><textarea id="jobDescription" rows="5" required></textarea></div>
+                        <button type="submit" class="button">Add Job Opening</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <h2><i class="fas fa-list-ul"></i> Existing Job Openings</h2>
+                <div class="section-content">
+                    <div class="form-group">
+                        <label for="searchInput">Search Jobs:</label>
+                        <input type="text" id="searchInput" placeholder="Search by role title...">
+                    </div>
+                    <ul id="jobsList" class="item-list">
+                        </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/jobs.js"></script>
+</body>
+</html>

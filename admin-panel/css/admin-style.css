@@ -1,0 +1,535 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-blue: #0d2c4f;
+    --accent-green: #97c93c;
+    --light-gray: #f4f7f6;
+    --white-color: #ffffff;
+    --sidebar-width: 260px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--light-gray);
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    min-height: 100vh;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    background-color: var(--primary-blue);
+    color: #a9b3c1;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: var(--sidebar-width);
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1001;
+}
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidebar-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white-color);
+    font-weight: 600;
+}
+.sidebar-header img {
+    height: 35px;
+}
+.sidebar-close-button {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white-color);
+    font-size: 2rem;
+    cursor: pointer;
+}
+.sidebar-nav {
+    flex-grow: 1;
+}
+.sidebar-nav ul {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    color: #a9b3c1;
+    transition: background-color 0.3s, color 0.3s;
+}
+.sidebar-nav a:hover, .sidebar-nav li.active a {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white-color);
+}
+.sidebar-nav i {
+    font-size: 1.1em;
+    width: 20px;
+    text-align: center;
+}
+
+/* --- Main Content --- */
+.main-content {
+    grid-column: 2 / -1;
+    display: flex;
+    flex-direction: column;
+}
+.main-header {
+    background: var(--white-color);
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-blue);
+}
+.logout-button {
+    background-color: #c0392b;
+    color: var(--white-color);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.logout-button:hover {
+    background-color: #a93226;
+}
+
+.dashboard-main {
+    padding: 30px;
+}
+.dashboard-main h1 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+.dashboard-card {
+    background: var(--white-color);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.dashboard-card h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-blue);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.section-content p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* --- General Form & Button Styles --- */
+.button {
+    display: inline-block;
+    background-color: var(--accent-green);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button i {
+    margin-right: 5px;
+}
+.button:hover {
+    background-color: #82ad34;
+}
+.button.button-secondary {
+    background-color: var(--accent-green);
+}
+.button.button-secondary:hover {
+    background-color: #82ad34;
+}
+.data-form .button {
+    width: 100%;
+    margin-top: 10px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* --- Item List Styles (for partners, jobs) --- */
+.item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.item-list li {
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-list li button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+.item-list li button:hover {
+    background-color: #c0392b;
+}
+
+/* --- Mobile Overlay --- */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    .main-content {
+        grid-column: 1 / -1;
+    }
+    .mobile-menu-button, .sidebar-close-button {
+        display: block;
+    }
+}
+
+/* --- Admin Page Header Styles --- */
+
+/* --- Admin Page Header Styles --- */
+.page-header-admin {
+    background: var(--primary-blue);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.page-header-admin .header-logo img {
+    height: 35px; /* Adjust logo size as needed */
+}
+
+.page-header-admin .header-title {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.page-header-admin .button {
+    white-space: nowrap; /* Prevents button text from wrapping */
+}
+
+/* --- Polished Admin Form Styles --- */
+.data-form {
+    background-color: #fdfdff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.data-form .form-group label {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #555;
+}
+
+.data-form .form-group input {
+    background-color: #f4f7f6;
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.data-form .form-group input:focus {
+    background-color: var(--white-color);
+    border-color: var(--accent-green);
+    box-shadow: 0 0 0 3px rgba(151, 201, 60, 0.15);
+}
+
+.data-form .button {
+    background: var(--primary-blue);
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.data-form .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background: #0a213b;
+}
+/* Add this to your admin-style.css */
+.page-header-admin .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.page-header-admin .logo span {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--white-color);
+}
+
+/* --- Admin Sub-page Controls & Table Styles --- */
+
+.controls-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.controls-grid .form-group {
+    margin-bottom: 0;
+}
+
+.control-buttons, .action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons {
+    margin-left: auto; /* Pushes action buttons to the right */
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Allows horizontal scrolling on small screens */
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: var(--light-gray);
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tbody tr:hover {
+    background-color: var(--accent-green-light);
+}
+
+.data-table .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.data-table .delete-btn:hover {
+    background-color: #c0392b;
+}
+/* --- Admin Sub-page Responsive Adjustments --- */
+
+@media (max-width: 768px) {
+    /* Make the sub-page headers stack vertically */
+    .page-header-admin {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .page-header-admin .header-title {
+        font-size: 1.3rem;
+    }
+    
+    /* Make the filter/action controls stack neatly */
+    .controls-grid {
+        flex-direction: column;
+        align-items: stretch; /* Make items take full width */
+    }
+
+    .controls-grid .control-buttons,
+    .controls-grid .action-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .controls-grid .action-buttons {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    /* Ensure all buttons in the controls are full-width */
+    .controls-grid .button {
+        width: 100%;
+        box-sizing: border-box; /* Include padding in the width */
+        text-align: center;
+    }
+}
+
+
+/* === LOGIN PAGE STYLES (Two-Panel Layout) === */
+.login-page-body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-page-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+.login-image-panel {
+    height: 100vh; /* Make the panel take the full screen height */
+    overflow: hidden; /* Hide any part of the image that might overflow */
+}
+
+.login-image-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This is the key property */
+    display: block;
+}
+
+.login-form-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: var(--white-color);
+}
+
+.login-form-content {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form-content .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+.login-form-content .logo img {
+    height: 40px;
+}
+.login-form-content .logo span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.login-form-content h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.login-form-content .subtitle {
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+/* Responsive adjustments for the login page */
+@media (max-width: 768px) {
+    .login-page-container {
+        grid-template-columns: 1fr; /* Stack to a single column */
+    }
+    .login-image-panel {
+        display: none; /* Hide image panel on small screens */
+    }
+}

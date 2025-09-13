@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Leads - Admin</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+            <link rel="icon" type="image/png" href="SLR_logo (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="page-header-admin">
+            <div class="header-logo">
+                <a href="dashboard.html" class="logo">
+                    <img src="SLR_logo (1).png" alt="Logo">
+                    <span>SLR CAPITAL SOLUTIONS PVT LTD</span>
+                </a>
+            </div>
+            <h1 class="header-title">Service Inquiries</h1>
+            <a href="dashboard.html" class="button button-secondary"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+        </header>
+
+        <main class="dashboard-main">
+            <section class="dashboard-section">
+                <h2><i class="fas fa-filter"></i> Filter & Actions</h2>
+                <div class="controls-grid">
+                    <div class="form-group">
+                        <label for="startDate">From:</label>
+                        <input type="date" id="startDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">To:</label>
+                        <input type="date" id="endDate">
+                    </div>
+                    <div class="control-buttons">
+                        <button id="filterButton" class="button"><i class="fas fa-search"></i> Filter</button>
+                        <button id="resetButton" class="button button-secondary">Reset</button>
+                    </div>
+                    <div class="action-buttons">
+                        <button id="exportButton" class="button"><i class="fas fa-file-csv"></i> Export as CSV</button>
+                        <button id="deleteAllButton" class="logout-button"><i class="fas fa-trash-alt"></i> Delete All</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <h2><i class="fas fa-list-ul"></i> All Leads</h2>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Submitted On</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Service</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leads-table-body">
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/leads.js"></script>
+</body>
+</html>

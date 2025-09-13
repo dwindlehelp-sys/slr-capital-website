@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SLR Capital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/admin-style.css">
+        <link rel="icon" type="image/png" href="SLR_logo (1).png">
+
+</head>
+<body>
+    <div class="grid-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="logo">
+                    <img src="SLR_logo (1).png" alt="Logo">
+                    <span>SLR CAPITAL SOLUTIONS PVT LTD</span>
+                </a>
+                <button class="sidebar-close-button" id="sidebar-close-button">&times;</button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="partners.html"><i class="fas fa-handshake"></i> Partners</a></li>
+                    <li><a href="jobs.html"><i class="fas fa-briefcase"></i> Job Openings</a></li>
+                    <li><a href="leads.html"><i class="fas fa-envelope-open-text"></i> Service Leads</a></li>
+                    <li><a href="applications.html"><i class="fas fa-file-alt"></i> Applications</a></li>
+                    <li><a href="password.html"><i class="fas fa-key"></i> Change Password</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <header class="main-header">
+                <button class="mobile-menu-button" id="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="header-actions">
+                    <button id="logoutButton" class="logout-button"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </header>
+
+            <main class="dashboard-main">
+                <h1>Dashboard Overview</h1>
+                <div class="dashboard-grid">
+
+                    <div class="dashboard-card">
+                        <h2><i class="fas fa-chart-bar"></i> Manage Home Page</h2>
+                        <div class="section-content">
+                            <form id="statsForm" class="data-form">
+                                <div class="form-group">
+                                    <label for="loanAmount">Loan Disbursed Amount:</label>
+                                    <input type="text" id="loanAmount" required>
+                                </div>
+                                <button type="submit" class="button"><i class="fas fa-save"></i> Save Stats</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h2><i class="fas fa-handshake"></i> Manage Partners</h2>
+                        <div class="section-content">
+                            <p>Add, view, search, and delete your lending partners.</p>
+                            <a href="partners.html" class="button button-secondary"><i class="fas fa-arrow-right"></i> Go to Partner Management</a>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h2><i class="fas fa-briefcase"></i> Manage Job Openings</h2>
+                        <div class="section-content">
+                            <p>Add, view, search, and delete job postings for your company.</p>
+                            <a href="jobs.html" class="button button-secondary"><i class="fas fa-arrow-right"></i> Go to Job Management</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h2><i class="fas fa-envelope-open-text"></i> Service Inquiries</h2>
+                        <div class="section-content">
+                            <p>View and manage all incoming customer inquiries.</p>
+                            <a href="leads.html" class="button button-secondary"><i class="fas fa-eye"></i> View All Leads</a>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h2><i class="fas fa-file-alt"></i> Job Applications</h2>
+                        <div class="section-content">
+                            <p>View and manage all submitted job applications.</p>
+                            <a href="applications.html" class="button button-secondary"><i class="fas fa-eye"></i> View All Applications</a>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
